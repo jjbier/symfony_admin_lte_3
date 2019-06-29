@@ -1,0 +1,48 @@
+{% set collapsedClass = '' %}
+{% set outlineClass = '' %}
+{% set loadingClass = '' %}
+{% if collapsed is defined and collapsed == true %}
+    {% set collapsedClass = 'collapsed-card' %}
+{% endif %}
+{% if loadingStyle is defined %}
+    {% set loadingClass = loadingStyle %}
+{% endif %}
+{% if outline is defined %}
+    {% set outlineClass = 'card-outline' %}
+{% endif %}
+{% if collapsed is defined and collapsed == true %}
+    {% set collapsedClass = 'collapsed-card' %}
+{% endif %}
+
+{% spaceless %}
+<div class="card {{ outlineClass }} card-{{ style }} {{ collapsedClass }}">
+    <div class="card-header">
+        <h3 class="card-title">{{ title }}</h3>
+        <div class="card-tools">
+            {% if maximizable is defined and maximizable == true %}
+                <button type="button" class="btn btn-tool" data-widget="maximize"><i class="fas fa-expand"></i></button>
+            {% endif %}
+            {% if expandable is defined and expandable == true %}
+                {% set  expandableIcon = 'fa-minus' %}
+                {% if collapsed is defined and collapsed == true %}
+                    {% set  expandableIcon = 'fa-plus' %}
+                {% endif %}
+                <button type="button" class="btn btn-tool" data-widget="collapse"><i class="fas {{ expandableIcon }}"></i></button>
+            {% endif %}
+
+            {% if removable is defined and removable == true %}
+                <button type="button" class="btn btn-tool" data-widget="remove"><i class="fas fa-times"></i></button>
+            {% endif %}
+        </div>
+        <!-- /.card-tools -->
+    </div>
+    <div class="card-body">
+        {{ body }}
+    </div>
+    {% if loading is defined and loading == true %}
+        <div class="overlay {{ loadingClass }}">
+            <i class="fas fa-2x fa-sync-alt"></i>
+        </div>
+    {% endif %}
+</div>
+{% endspaceless %}

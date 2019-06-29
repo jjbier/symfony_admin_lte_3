@@ -1,0 +1,17 @@
+{% set classStyle =  'bg-'~ style  %}
+{% if gradient is defined  and gradient == true %}
+    {% set classStyle =  'bg-gradient-'~ style  %}
+{% endif %}
+{% spaceless %}
+<div class="info-box {{ classStyle }}">
+    <span class="info-box-icon"><i class="{{ icon }}"></i></span>
+    <div class="info-box-content">
+        <span class="info-box-text">{{ text }}</span>
+        <span class="info-box-number">{{ number }}</span>
+        <div class="progress">
+            <div class="progress-bar" style="width: {{ percent }}%"></div>
+        </div>
+        <span class="progress-description">{{ description }}</span>
+    </div>
+</div>
+{% endspaceless %}

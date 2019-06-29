@@ -1,0 +1,19 @@
+{% spaceless %}
+<div class="small-box bg-{{ style }}">
+    {% if loading is defined and loading == true %}
+        <div class="overlay">
+            <i class="fas fa-3x fa-sync-alt"></i>
+        </div>
+    {% endif %}
+    <div class="inner">
+        <h3>{{ header|raw }}</h3>
+        <p>{{ body|raw }}</p>
+    </div>
+    <div class="icon">
+        <i class="{{ icon }}"></i>
+    </div>
+    <a href="{{ link }}" class="small-box-footer">
+        More info <i class="fas fa-arrow-circle-right"></i>
+    </a>
+</div>
+{% endspaceless %}
