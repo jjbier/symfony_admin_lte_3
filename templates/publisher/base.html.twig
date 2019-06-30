@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="{{ app.request.locale }}">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>xeBook</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Xebook">
+    <meta name="author" content="Xercode Media Software S.L.">
+    <link rel="icon" href="{{ asset('build/images/favicon.ico') }}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+          integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+    {% block stylesheets %}
+        {{ encore_entry_link_tags('publisher') }}
+    {% endblock %}
+</head>
+<body class="sidebar-mini layout-navbar-fixed">
+<div class="wrapper">
+    {% block navbar %}{% include 'publisher/navbar.html.twig' %}{% endblock navbar %}
+    {% block sidebar %}{% include 'publisher/sidebar.html.twig' %}{% endblock sidebar %}
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">{% block body %}{% endblock body %}</div>
+    <!-- /.content-wrapper -->
+    <footer class="main-footer">
+        <div class="float-right d-none d-sm-block">
+            <b>Version</b> 1.9.5
+        </div>
+        <strong>Copyright © 2011-{{ "now"|date('Y')}} <a href="https://xercode.es">Xercode.es</a>.</strong> All rights
+        reserved.
+    </footer>
+    <!-- Control Sidebar -->
+    <aside class="control-sidebar control-sidebar-dark">
+        <!-- Control sidebar content goes here -->
+    </aside>
+    <!-- /.control-sidebar -->
+</div>
+{% block javascripts %}
+    {{ encore_entry_script_tags('publisher') }}
+{% endblock %}
+</body>
+</html>

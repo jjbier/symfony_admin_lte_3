@@ -5,6 +5,7 @@
         "core-js": "^3.0.0",
         "fastclick": "^1.0.6",
         "icheck-bootstrap": "^3.0.1",
+        "mini-css-extract-plugin": "^0.7.0",
         "node-sass": "^4.12.0",
         "popper.js": "^1.15.0",
         "sass-loader": "^7.0.1",
@@ -19,6 +20,7 @@
         "build": "encore production --progress"
     },
     "dependencies": {
-        "jquery": "^3.4.1"
+        "jquery": "^3.4.1",
+        "select2": "^4.0.7"
     }
 }

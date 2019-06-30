@@ -17,6 +17,14 @@ Encore
          pattern: /\.(png|jpg|jpeg)$/
 
      })
+    .copyFiles({
+        from: './assets/images',
+        // versioning is enabled, add the file hash too use [hash:8]
+        to: 'images/[path][name].[hash:8].[ext]',
+        // only copy files matching this pattern
+        pattern: /\.(png|jpg|jpeg)$/
+
+    })
     // public path used by the web server to access the output path
     .setPublicPath('/build')
     // only needed for CDN's or sub-directory deploy
@@ -35,6 +43,7 @@ Encore
     .addEntry('login', './assets/js/login.js')
     .addEntry('register', './assets/js/register.js')
     .addEntry('lockscreen', './assets/js/lockScreen.js')
+    .addEntry('publisher', './assets/js/publisher.js')
     //.addEntry('page1', './assets/js/page1.js')
     //.addEntry('page2', './assets/js/page2.js')
 

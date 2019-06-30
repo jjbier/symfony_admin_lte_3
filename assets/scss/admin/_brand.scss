@@ -1,0 +1,28 @@
+.brand-link {
+  $brand-link-padding-y: $navbar-brand-padding-y + $navbar-padding-y;
+  padding: $brand-link-padding-y $sidebar-padding-x;
+  font-size: $navbar-brand-font-size;
+  display: block;
+  line-height: $line-height-lg;
+  white-space: nowrap;
+  align-items: center;
+  &:hover {
+    color: $white;
+    text-decoration: none;
+  }
+
+  [class*="sidebar-light"] & {
+    color: $dark;
+    border-bottom: 1px solid $gray-300;
+  }
+}
+
+.brand-image {
+  float:left;
+  line-height: .8;
+  max-height: 34px;
+    max-width:  34px;
+    margin-left: .8rem;
+    margin-right: .5rem;
+    margin-top: 5px;
+}

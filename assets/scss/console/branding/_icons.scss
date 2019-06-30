@@ -1,0 +1,23 @@
+$color-primary: '#F68026';
+$color-success: '#3c763d';
+$color-info:    '#31708f';
+$color-warning: '#f0ad4e';
+$color-danger:  '#a94442';
+
+
+.icon-color-primary{
+  color: $color-primary;
+}
+.icon-color-success{
+  color: $color-success;
+}
+.icon-color-info {
+  color: $color-info;
+}
+.icon-color-warning {
+  color: $color-warning;
+}
+
+.icon-color-danger {
+  color: $color-danger;
+}

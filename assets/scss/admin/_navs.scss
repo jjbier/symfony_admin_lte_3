@@ -1,0 +1,96 @@
+/*
+ * Component: Nav
+ * --------------
+ */
+.nav-pills {
+  .nav-link {
+    color: $gray-600;
+
+    &:not(.active):hover {
+      color: theme-color("primary")
+    }
+  }
+  .nav-item {
+    &.dropdown.show {
+      .nav-link:hover {
+        color: $dropdown-link-active-color;
+      }
+    }
+  }
+}
+
+.switch-user-menu-select {
+  font-size: 14px;
+  height: 34px;
+  border: none;
+  border-radius: 0px;
+  border-bottom: 1px solid #E0E0E0;
+  box-shadow: none;
+  padding: 5px 0px;
+  background-color: transparent;
+  outline:0px !important;
+}
+//
+// Vertical Tabs
+//
+.nav-tabs.flex-column {
+  border-right: $nav-tabs-border-width solid $nav-tabs-border-color;
+  border-bottom: 0;
+
+  .nav-link {
+    margin-right: -$nav-tabs-border-width;
+
+    @include hover-focus {
+      border-color: $gray-200 $nav-tabs-border-color $gray-200 $gray-200;
+    }
+  }
+
+  .nav-link.active,
+  .nav-item.show .nav-link {
+    border-color: $gray-300 $nav-tabs-link-active-bg $gray-300 $gray-300;
+  }
+
+  &.nav-tabs-right {
+    border-right: 0;
+    border-left: $nav-tabs-border-width solid $nav-tabs-border-color;
+
+
+    .nav-link {
+      margin-left: -$nav-tabs-border-width;
+
+      @include hover-focus {
+        border-color: $gray-200 $gray-200 $gray-200 $nav-tabs-border-color;
+      }
+    }
+
+    .nav-link.active,
+    .nav-item.show .nav-link {
+      border-color: $gray-300 $gray-300 $gray-300 $nav-tabs-link-active-bg;
+    }
+  }
+}
+
+//
+// Color variants
+//
+@each $color, $value in $theme-colors {
+  @if $color==light {
+    .navbar-#{$color} {
+      background-color: $value;
+    }
+  }
+}
+
+@each $color, $value in $theme-colors {
+  @if $color!=light {
+    .navbar-#{$color} {
+      background-color: $value;
+    }
+  }
+}
+
+@each $color, $value in $colors {
+  .navbar-#{$color} {
+    background-color: $value;
+  }
+}

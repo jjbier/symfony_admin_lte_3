@@ -1,0 +1,306 @@
+.table-link {
+  text-transform: uppercase;
+  color: $orange;
+  display: inline-block;
+  .fa, img {
+    margin-right: 5px;
+    color: $orange;
+  }
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.table {
+  margin-bottom: 0px;
+  th {
+    text-align: center;
+  }
+}
+
+.table-reponsive {
+  th, td {
+    font-size: 12px;
+  }
+}
+
+/* Notification Table -> Dashboard and Notifications page */
+.table-notifications {
+  table {
+    margin-bottom: 0px;
+    thead {
+      tr {
+        th {
+          background-color: $grey-normal;
+          font-weight: bold;
+          padding: 15px 30px;
+          text-transform: uppercase;
+        }
+      }
+    }
+    tbody {
+      tr {
+        td {
+          padding: 15px 30px;
+          background-color: $white;
+          a {
+            &:hover {
+              color: $black;
+            }
+            p {
+              font-weight: normal;
+            }
+          }
+          h6 {
+            .fa {
+              margin-right: 15px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Tablas General */
+#ordersTable, #exchangeTable, #categoryTable, #ebooksPackTable, #sociosTable, .xercode-table, .socio-table {
+  thead {
+    border-top: 1px solid $border-color;
+    background-color: $white;
+    font-weight: bold;
+    text-transform: uppercase;
+    tr {
+      th {
+        padding: 15px 30px;
+        font-size: 12px;
+      }
+    }
+  }
+  tbody {
+    tr {
+      border-bottom: 1px solid $border-color;
+      &:nth-child(even) {
+        background-color: $white;
+      }
+      &:nth-child(odd) {
+        background-color: $background-table-odd;
+      }
+      td {
+        padding: 15px 30px;
+        vertical-align: middle;
+        font-size: 12px;
+        ul li {
+          font-size: 12px;
+        }
+        p {
+          font-size: 12px;
+          margin-bottom: 5px;
+          line-height: 12px;
+        }
+      }
+    }
+  }
+  .new, .renew {
+    color: $green;
+  }
+  .finish, .cancel {
+    color: $red;
+  }
+  .preparing {
+    color: $grey-negotiation;
+  }
+  .piece {
+    width: 15%;
+  }
+}
+
+/* Tabla categorias */
+#categoryTable {
+  table {
+    margin-bottom: 0px;
+  }
+}
+
+/* Buscador tabla */
+.input-table-search {
+  position: relative;
+  .fa {
+    position: absolute;
+    top: 20%;
+    right: -15px;
+    color: $orange;
+    &:hover {
+      font-size: 1.15em;
+      cursor: pointer;
+    }
+  }
+}
+
+/* Tabla de grupos de intercambio - Single */
+.exchange-table-single, .duplicity-table {
+  background-color: $white;
+  header {
+    text-transform: uppercase;
+    font-weight: bold;
+    border-top: 1px solid $border-color;
+  }
+  header, .wrapper-exchange-single, .wrapper-duplicity-single {
+    display: flex;
+    border-bottom: 1px solid $border-color;
+  }
+  .book-detail {
+    padding: 15px;
+    p {
+      margin: 0px;
+    }
+    .detail-title {
+      font-weight: bold;
+    }
+  }
+  .checkbox {
+    margin: 0px;
+  }
+  .fa-chevron-down, .fa-chevron-up {
+    margin-left: 15px;
+  }
+}
+
+.exchange-table-single {
+  .column-1 {
+    flex-basis: 60%;
+  }
+  .column-2 {
+    flex-basis: 40%;
+  }
+  .column-1, .column-2 {
+    padding: 15px 30px;
+  }
+}
+
+.duplicity-table {
+  .column-1, .column-3 {
+    flex-basis: 40%;
+    padding: 15px 30px;
+    line-height: 25px;
+  }
+  .column-2 {
+    flex-basis: 20%;
+    padding: 15px 30px;
+    line-height: 25px;
+  }
+}
+
+/* Tabla Xebook */
+.buscador-tabla {
+  input {
+    width: 100%;
+  }
+}
+
+.flex-table {
+  header, .row-table {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  header {
+    padding: 0px 15px;
+    border-top: 1px solid $border-color;
+    border-bottom: 1px solid $border-color;
+    font-weight: bold;
+    text-transform: uppercase;
+    align-items: center;
+    font-size: 12px;
+  }
+  .row-table {
+    padding: 0px 15px;
+    &:nth-child(odd) {
+      background-color: $background-table-odd;
+    }
+  }
+  [class^="col"] {
+    padding: 15px;
+    line-height: 15px;
+  }
+  p {
+    margin-bottom: 0px;
+  }
+  .options {
+    span {
+      cursor: pointer;
+      font-weight: bold;
+      display: inline-block;
+      margin-right: 10px;
+      &:last-child {
+        margin-right: 0px;
+      }
+      &:hover {
+        color: $blue;
+        transition: color 0.5s;
+      }
+      margin-bottom: 15px;
+    }
+    select {
+      margin-bottom: 15px;
+    }
+  }
+  .checkbox {
+    margin: 0px;
+  }
+}
+
+#tablaComentarios {
+  .col-1 {
+    flex-basis: 20%;
+  }
+  .col-2 {
+    flex-basis: 20%;
+  }
+  .col-3 {
+    flex-basis: 35%;
+  }
+  .col-4 {
+    flex-basis: 25%;
+  }
+}
+
+#tablaAvisos {
+  .col-1 {
+    flex-basis: 20%;
+  }
+  .col-2 {
+    flex-basis: 15%;
+  }
+  .col-3 {
+    flex-basis: 20%;
+  }
+  .col-4 {
+    flex-basis: 20%;
+  }
+  .col-5 {
+    flex-basis: 25%;
+  }
+}
+
+#tablaEjemplaresMod {
+  .col-1 {
+    flex-basis: 30%;
+  }
+  .col-2 {
+    flex-basis: 10%;
+  }
+  .col-3 {
+    flex-basis: 10%;
+  }
+  .col-4 {
+    flex-basis: 10%;
+  }
+  .col-5 {
+    flex-basis: 10%;
+  }
+  .col-6 {
+    flex-basis: 15%;
+  }
+  .col-7 {
+    flex-basis: 15%;
+  }
+}

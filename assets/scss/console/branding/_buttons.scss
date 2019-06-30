@@ -1,0 +1,29 @@
+.btn {
+  font-weight: bold;
+  background-color: $orange;
+  color: $white;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  transition: background-color .5s, color .5s;
+  &.btn-secondary {
+    background-color: transparent;
+    color: $orange;
+    border: 1px solid $orange;
+    &:hover {
+      background-color: transparent;
+      color: $dark-orange;
+      border-color: $dark-orange;
+      transition: color .5s;
+    }
+  }
+  &:hover {
+    background-color: $dark-orange;
+    color: $white;
+    transition: background-color .5s;
+  }
+  &:active, &:focus {
+    color: $white;
+    transition: background-color .5s;
+    outline: none;
+  }
+}

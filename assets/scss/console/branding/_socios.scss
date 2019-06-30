@@ -1,0 +1,21 @@
+#resultadoCirculacion{
+   margin-top: 15px;
+}
+.info-img{
+   p{
+      margin-bottom: 5px;
+      line-height: 18px;
+      color: $dark-grey;
+      font-size: 12px;
+   }
+}
+.imagen-ejemplo{
+   height: 200px;
+   width: 200px;
+   background-color: $dark-grey;
+}
+.editar-imagen{
+   > div{
+      margin-bottom: 15px;
+   }
+}

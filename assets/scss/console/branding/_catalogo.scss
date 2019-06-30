@@ -1,0 +1,22 @@
+.btn-market{
+   width: 100%;
+}
+.wrapper-market-options{
+   padding: 0px 15px 15px 15px;
+   background-color: $white;
+   display: flex;
+   align-items: center;
+   span{
+      cursor: pointer;
+      font-weight: bold;
+      display: inline-block;
+      margin-right: 15px;
+      &:last-child{
+            margin-right: 0px;
+      }
+      &:hover{
+            color: $blue;
+            transition: color 0.5s;
+      }
+   }
+}
